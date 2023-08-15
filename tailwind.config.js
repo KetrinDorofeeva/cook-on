@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        header: ['Orelega One']
+        header: ["Orelega One", "sans-serif"],
+        main: ["Niramit", "sans-serif"]
       },
       boxShadow: {
         'header': '0 5px 20px rgba(0,0,0,.07)'
@@ -19,6 +20,13 @@ export default {
       },
       spacing: {
         'login-arrow': '23px'
+      },
+      colors: {
+        'main': '#212121',
+        'orange': '#F68B31'
+      },
+      letterSpacing: {
+        'main': '0.8px'
       }
     },
   },

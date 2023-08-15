@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-between px-5 py-3.5 shadow-header">
+  <header class="flex items-center justify-between px-5 py-3.5 mb-7 shadow-header">
     <div class="font-header text-3xl">CookOn</div>
 
     <div class="flex items-center">
