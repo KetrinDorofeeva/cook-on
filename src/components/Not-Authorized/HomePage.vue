@@ -3,16 +3,18 @@
 
   <main class="text-main font-main tracking-main px-5">
     <CategoriesHomePage></CategoriesHomePage>
+    <PopularRecipes></PopularRecipes>
   </main>
 </template>
 
 <script>
   import Header from "../../UI/Not-Authorized/Header.vue";
   import CategoriesHomePage from "../../UI/CategoriesHomePage.vue";
+  import PopularRecipes from "../../UI/PopularRecipes.vue";
 
   export default {
     name: 'HomePage',
-    components: {CategoriesHomePage, Header},
+    components: {PopularRecipes, CategoriesHomePage, Header},
   }
 </script>
 
