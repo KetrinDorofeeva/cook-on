@@ -21,10 +21,17 @@
 
         <div class="px-5 py-5">
           <div class="text-xl font-semibold leading-card-title mb-2">Суп-пюре из тыквы со сливками</div>
-          <p class="text-justify leading-card-text">Тыква, картошка, морковь, репчатый лук, чеснок, сливочное масло, сливки 10% жирности, соль, специи</p>
+          <p class="text-justify leading-card-text mb-4">Тыква, картошка, морковь, репчатый лук, чеснок, сливочное масло, сливки 10% жирности, соль, специи</p>
+
+          <div class="flex items-center">
+            <Icon icon="bx:food-menu" color="#f4b990" width="19" height="19" />
+            <div class="">Подробнее</div>
+            <Icon icon="ep:arrow-up-bold" color="#b2b2b2" width="19" height="19" />
+          </div>
         </div>
       </div>
-      <div class="shadow-card-main">
+
+      <div class="shadow-card-main rounded-b-xl">
         <div class="relative">
           <section class="flex items-center absolute left-5 bottom-2.5">
             <div class="bg-category rounded-category-hashtag text-xs font-semibold px-category-hashtag-x py-category-hashtag-y">САЛАТЫ</div>
