@@ -7,7 +7,20 @@ export default {
     './src/components/**/*.{vue,store,ts}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        header: ['Orelega One']
+      },
+      boxShadow: {
+        'header': '0 5px 20px rgba(0,0,0,.07)'
+      },
+      scale: {
+        'opposite-side': '-1'
+      },
+      spacing: {
+        'login-arrow': '23px'
+      }
+    },
   },
   plugins: [],
 }
