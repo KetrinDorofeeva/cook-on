@@ -25,17 +25,17 @@
             <div class="text-xl font-semibold leading-card-title mb-2">Суп-пюре из тыквы со сливками</div>
             <p class="text-justify leading-card-text mb-4">Тыква, картошка, морковь, репчатый лук, чеснок, сливочное масло, сливки 10% жирности, соль, специи</p>
 
-            <div class="flex items-center">
+            <div class="flex items-center" @click="recipeDetails.enableActivity">
               <Icon icon="bx:food-menu" color="#f4b990" width="19" height="19" />
               <p class="text-more ml-2 font-medium">Подробнее</p>
-              <Icon icon="ep:arrow-up-bold" class="ml-3" color="rgba(33,33,33,.4)" width="18" height="18" />
+              <Icon icon="ep:arrow-up-bold" class="ml-3 flip_arrow_hidden" :class="[{flip_arrow_active: !recipeDetails.listActivity}]" color="rgba(33,33,33,.4)" width="18" height="18" />
             </div>
           </div>
 
           <hr class="h-px bg-hr w-full mb-4">
 
           <!-- Выпадающий список (кКал, сложность, время, БЖУ) -->
-          <div class="mb-6">
+          <div class="mb-6" v-if="recipeDetails.listActivity === false" :class="[{block_active: !recipeDetails.listActivity}]">
             <div class="flex items-center justify-between px-5 mb-4">
               <div class="flex items-center">
                 <Icon icon="bi:pie-chart-fill" color="#f4b990" width="19" height="19" />
@@ -101,17 +101,17 @@
             <div class="text-xl font-semibold leading-card-title mb-2">Салат из креветок с огурцом и яйцом</div>
             <p class="text-justify leading-card-text mb-4">Креветки, куриное яйцо, огурец, твердый сыр, майонез, соль, укроп</p>
 
-            <div class="flex items-center">
+            <div class="flex items-center" @click="recipeDetails.enableActivity">
               <Icon icon="bx:food-menu" color="#f4b990" width="19" height="19" />
               <p class="text-more ml-2 font-medium">Подробнее</p>
-              <Icon icon="ep:arrow-up-bold" class="ml-3" color="rgba(33,33,33,.4)" width="18" height="18" />
+              <Icon icon="ep:arrow-up-bold" class="ml-3 flip_arrow_hidden" :class="[{flip_arrow_active: !recipeDetails.listActivity}]" color="rgba(33,33,33,.4)" width="18" height="18" />
             </div>
           </div>
 
           <hr class="h-px bg-hr w-full mb-4">
 
           <!-- Выпадающий список (кКал, сложность, время, БЖУ) -->
-          <div class="mb-6">
+          <div class="mb-6" v-if="recipeDetails.listActivity === false">
             <div class="flex items-center justify-between px-5 mb-4">
               <div class="flex items-center">
                 <Icon icon="bi:pie-chart-fill" color="#f4b990" width="19" height="19" />
@@ -164,6 +164,12 @@
   </article>
 </template>
 
+<script setup>
+  import {useRecipeDetails} from "../store/RecipeDetails.js";
+
+  const recipeDetails = useRecipeDetails();
+</script>
+
 <script>
   import {Icon} from "@iconify/vue";
 
@@ -176,5 +182,11 @@
 </script>
 
 <style scoped lang="scss">
+  .flip_arrow_hidden {
+    @apply ease-in duration-300
+  }
 
+  .flip_arrow_active {
+    @apply rotate-180 ease-in duration-300
+  }
 </style>
