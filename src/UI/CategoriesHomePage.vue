@@ -12,27 +12,27 @@
     <section class="grid grid-cols-2 gap-2.5">
       <div class="relative">
         <div class="absolute text-white font-bold left-3.5 bottom-2">Каши</div>
-        <img src="/public/img/categories/category-porridge.png" class="rounded-xl">
+        <img src="/public/img/categories/category-porridge.png" alt="Каши" class="rounded-xl">
       </div>
       <div class="relative">
         <div class="absolute text-white font-bold left-3.5 bottom-2">Закуски</div>
-        <img src="/public/img/categories/category-snacks.png" class="rounded-xl">
+        <img src="/public/img/categories/category-snacks.png" alt="Закуски" class="rounded-xl">
       </div>
       <div class="relative">
         <div class="absolute text-white font-bold left-3.5 bottom-2">Супы</div>
-        <img src="/public/img/categories/category-soups.png" class="rounded-xl">
+        <img src="/public/img/categories/category-soups.png" alt="Супы" class="rounded-xl">
       </div>
       <div class="relative">
         <div class="absolute text-white font-bold left-3.5 bottom-2">Салаты</div>
-        <img src="/public/img/categories/category-salads.png" class="rounded-xl">
+        <img src="/public/img/categories/category-salads.png" alt="Салаты" class="rounded-xl">
       </div>
       <div class="relative">
         <div class="absolute text-white font-bold left-3.5 bottom-2">Пироги</div>
-        <img src="/public/img/categories/category-pies.png" class="rounded-xl">
+        <img src="/public/img/categories/category-pies.png" alt="Пироги" class="rounded-xl">
       </div>
       <div class="relative">
         <div class="absolute text-white font-bold left-3.5 bottom-2">Напитки</div>
-        <img src="/public/img/categories/category-beverages.png" class="rounded-xl">
+        <img src="/public/img/categories/category-beverages.png" alt="Напитки" class="rounded-xl">
       </div>
     </section>
   </article>

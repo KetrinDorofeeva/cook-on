@@ -26,7 +26,10 @@ export default {
         'main': '#212121',
         'orange': '#F68B31',
         'category': '#FEDD6C',
-        'category-hashtag': 'rgba(0,0,0,.5)'
+        'category-hashtag': 'rgba(0,0,0,.5)',
+        'more': 'rgba(33,33,33,.7)',
+        'hr': 'rgba(237,237,237,.5)',
+        'grade-star': 'rgba(33,33,33,.7)'
       },
       letterSpacing: {
         'main': '0.8px'
@@ -36,7 +39,7 @@ export default {
         'card-text': '21px'
       },
       borderRadius: {
-        'category-hashtag': '10px'
+        'br-ten': '10px'
       },
       padding: {
         'category-hashtag-x': '9px',
