@@ -1,7 +1,7 @@
 import {defineStore} from "pinia";
 import {ref} from "vue";
 
-// Подробно о рецепте (выпадающий список)
+// Карточка рецепта
 export const useRecipeDetails = defineStore('recipeDetails', () => {
     const recipes = ref([
         {
