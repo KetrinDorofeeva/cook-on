@@ -1,7 +1,7 @@
 <template>
   <Header class="text-main tracking-main"></Header>
 
-  <main class="text-main font-main tracking-main px-5">
+  <main class="text-main font-main tracking-main px-5 mb-8">
     <CategoriesHomePage></CategoriesHomePage>
     <PopularRecipes></PopularRecipes>
   </main>
