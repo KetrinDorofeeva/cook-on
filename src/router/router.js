@@ -10,7 +10,7 @@ const routes = [
 
 const router = createRouter({
     routes,
-    history: createWebHistory(),
+    history: createWebHistory('/cook-on/'),
 });
 
 export default router;
