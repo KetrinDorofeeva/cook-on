@@ -36,7 +36,7 @@
           <hr class="h-px bg-hr w-full mb-4">
 
           <!-- Выпадающий список (кКал, сложность, время, БЖУ) -->
-          <div class="mb-6" v-if="recipe.moreActive === true" :class="[{block_active: !recipeDetails.listActivity}]">
+          <div class="mb-6" v-if="recipe.moreActive === true">
             <div class="flex items-center justify-between px-5 mb-4">
               <div class="flex items-center">
                 <Icon icon="bi:pie-chart-fill" color="#f4b990" width="19" height="19" />
