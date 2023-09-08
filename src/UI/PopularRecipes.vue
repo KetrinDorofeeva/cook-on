@@ -5,7 +5,7 @@
 
       <div class="flex items-center">
         <div class="text-orange font-bold mr-1.5">Все</div>
-        <Icon icon="mingcute:arrow-up-fill" class="right-login-arrow rotate-90" color="#f68b31" width="18" height="18" />
+        <Icon icon="mingcute:arrow-up-fill" class="rotate-90" color="#f68b31" width="18" height="18" />
       </div>
     </div>
 
@@ -13,8 +13,8 @@
       <div class="shadow-card-main rounded-b-xl" v-for="recipe in recipeDetails.recipes" :key="recipe.id">
         <div class="relative">
           <section class="flex items-center absolute left-5 bottom-2.5">
-            <div class="bg-category rounded-br-ten text-xs font-semibold px-category-hashtag-x py-category-hashtag-y">{{recipe.category}}</div>
-            <div v-for="hashtag in recipe.hashtags" :key="hashtag.id" class="[&:not(:first-child)]:ml-2 bg-category-hashtag rounded-br-ten text-xs font-semibold text-white px-category-hashtag-x py-category-hashtag-y">
+            <div class="bg-category rounded-[10px] text-xs font-semibold px-[9px] py-[6px]">{{recipe.category}}</div>
+            <div v-for="hashtag in recipe.hashtags" :key="hashtag.id" class="[&:not(:first-child)]:ml-2 bg-category-hashtag rounded-[10px] text-xs font-semibold text-white px-[9px] py-[6px]">
               #{{hashtag.name}}
             </div>
           </section>
@@ -23,13 +23,13 @@
 
         <div class="py-5">
           <div class="px-5 mb-3.5">
-            <div class="text-xl font-semibold leading-card-title mb-2">{{recipe.title}}</div>
-            <p class="text-justify leading-card-text mb-4">{{recipe.description}}</p>
+            <div class="text-xl font-semibold leading-[26px] mb-2">{{recipe.title}}</div>
+            <p class="text-justify leading-[21px] mb-4">{{recipe.description}}</p>
 
             <div class="flex items-center" @click="recipe.moreActive = !recipe.moreActive">
               <Icon icon="bx:food-menu" color="#f4b990" width="19" height="19" />
               <p class="text-more ml-2 font-medium">Подробнее</p>
-              <Icon icon="ep:arrow-up-bold" class="ml-3 ease-in duration-200" :class="[{flip_arrow_active: recipe.moreActive}]" color="rgba(33,33,33,.4)" width="18" height="18" />
+              <Icon icon="ep:arrow-up-bold" class="ml-3 ease-in duration-200" :class="[{flip_arrow_active: recipe.moreActive}]" color="rgba(0,0,0,.4)" width="18" height="18" />
             </div>
           </div>
 
@@ -80,11 +80,11 @@
               </div>
               <div class="flex items-center">
                 <Icon icon="ph:star-fill" class="ml-6" color="#f7d000" width="30" height="30" />
-                <p class="text-grade-star font-medium ml-2">{{recipe.grade}}</p>
+                <p class="text-[rgba(0,0,0,.7)] font-medium ml-2">{{recipe.grade}}</p>
               </div>
             </div>
 
-            <button class="px-4 py-1.5 bg-orange text-white font-semibold rounded-br-ten">К рецепту</button>
+            <button class="px-4 py-1.5 bg-orange text-white font-semibold rounded-[10px]">К рецепту</button>
           </div>
         </div>
       </div>
