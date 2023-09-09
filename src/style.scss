@@ -10,3 +10,34 @@ html {
   letter-spacing: 0.6px;
   color: #212121;
 }
+
+// Поле ввода
+.field__item {
+  @apply block relative h-12 w-full
+}
+.field__item .entry__field {
+  @apply absolute h-12 w-full bg-empty-field border-white rounded-[10px] transition
+  focus:ring-0 focus:border-[1.3px] focus:bg-white focus:border-orange
+  valid:border-[1px] valid:border-solid valid:border-orange valid:bg-white
+}
+.field__item .label__title {
+  @apply absolute top-3 left-5 font-medium text-[rgba(0,0,0,.5)] duration-200 cursor-text
+}
+.field__item .cross__close {
+  @apply hidden absolute right-0
+}
+.field__item .entry__field:focus + .label__title,
+.field__item .entry__field:valid + .label__title {
+  @apply -top-2 left-3 px-1 bg-white text-orange text-xs;
+}
+.field__item .entry__field:valid ~ .cross__close {
+  @apply block right-2.5 top-2.5;
+}
+
+// Кнопка
+.btn {
+  @apply uppercase w-full py-3.5 bg-inactive-button text-[rgba(0,0,0,.5)] text-lg tracking-[2px] rounded-[10px] duration-300
+}
+.btn__active {
+  @apply bg-orange text-white font-semibold
+}

@@ -21,7 +21,8 @@ export default {
         'category-hashtag': 'rgba(0,0,0,.5)',
         'more': 'rgba(0,0,0,.7)',
         'hr': 'rgba(237,237,237,.5)',
-        'empty-field': '#F8F8F8'
+        'empty-field': '#F8F8F8',
+        'inactive-button': '#F8F8F8'
       },
     },
   },
