@@ -15,7 +15,7 @@
         <label class="field__item mb-5">
           <input type="text" class="entry__field" v-model="input_login" required/>
           <span class="label__title">Логин</span>
-          <img src="/public/img/clear.svg" class="cross__close" @click="input_login=''">
+          <img src="/public/img/clear.svg" class="cross__close" @click="input_login=''" alt="Крестик">
         </label>
 
         <p class="flex justify-end font-medium text-[14px] text-orange mb-1">Забыли пароль?</p>
@@ -23,7 +23,7 @@
         <label class="field__item mb-5">
           <input type="password" class="entry__field" v-model="input_password" required/>
           <span class="label__title">Пароль</span>
-          <img src="/public/img/clear.svg" class="cross__close" @click="input_password=''">
+          <img src="/public/img/clear.svg" class="cross__close" @click="input_password=''" alt="Крестик">
         </label>
 
         <div class="flex items-center gap-2">
