@@ -38,6 +38,20 @@ html {
 .btn {
   @apply uppercase w-full py-3.5 bg-inactive-button text-[rgba(0,0,0,.5)] text-lg tracking-[2px] rounded-[10px] duration-300
 }
-.btn__active {
+.btn.active {
   @apply bg-orange text-white font-semibold
+}
+
+// Ссылки табы
+.p-tabview-nav-container {
+  @apply mb-8
+}
+.p-tabview-nav {
+  @apply justify-between
+}
+.p-tabview-header .p-tabview-title {
+  @apply py-2.5 px-[30px] text-[11px] font-semibold uppercase border-[1px] border-solid border-[rgba(237,237,237,.5)] rounded-2xl transition
+}
+.p-highlight .p-tabview-title {
+  @apply text-orange border-orange
 }

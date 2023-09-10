@@ -3,7 +3,7 @@
 
   <main class="px-5 mb-8">
     <section class="flex items-center gap-1.5 mb-5">
-      <Icon icon="ph:house-bold" color="#f68b31" width="22" height="22" />
+      <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="22" height="22" />
       <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="26" height="26" />
       <p class="font-medium text-[rgba(0,0,0,.3)]">Авторизация</p>
     </section>
@@ -41,7 +41,7 @@
           <Icon icon="mingcute:arrow-up-fill" class="rotate-90" color="#f68b31" width="18" height="18" />
         </div>
 
-        <button class="btn absolute bottom-0" @click="requiredField" :class="[{btn__active: input_login !== '' && input_password !== ''}]">
+        <button class="btn absolute bottom-0" @click="requiredField" :class="[{active: input_login !== '' && input_password !== ''}]">
           Войти
         </button>
       </form>
