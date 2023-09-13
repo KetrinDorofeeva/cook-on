@@ -5,11 +5,11 @@
     <section class="flex items-center gap-1.5 mb-5">
       <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="22" height="22" />
       <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="26" height="26" />
-      <p class="font-medium text-[rgba(0,0,0,.3)]">Авторизация</p>
+      <p class="font-medium text-[rgba(0,0,0,.3)]">{{page_title}}</p>
     </section>
 
     <section class="relative h-screen">
-      <h1 class="text-2xl font-semibold mb-6">Авторизация</h1>
+      <h1 class="text-2xl font-semibold mb-6">{{page_title}}</h1>
 
       <form>
         <div class="mb-5">
@@ -61,6 +61,7 @@
     },
     data() {
       return {
+        page_title: 'Авторизация',
         input_login: '',
         input_password: '',
         required_login: false,
