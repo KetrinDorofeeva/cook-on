@@ -3,13 +3,13 @@
     <div class="flex items-center justify-between mb-4">
       <div class="text-xl font-bold">Популярные</div>
 
-      <div class="flex items-center">
-        <div class="text-orange font-bold mr-1.5">Все</div>
+      <div class="flex items-center gap-1.5">
+        <div class="text-orange font-bold">Все</div>
         <Icon icon="mingcute:arrow-up-fill" class="rotate-90" color="#f68b31" width="18" height="18" />
       </div>
     </div>
 
-    <section class="grid grid-cols-1 gap-7">
+    <section class="grid grid-cols-1 gap-7 mb-10">
       <div class="shadow-card-main rounded-b-xl" v-for="recipe in recipeDetails.recipes" :key="recipe.id">
         <div class="relative">
           <section class="flex items-center absolute left-5 bottom-2.5">
@@ -89,6 +89,11 @@
         </div>
       </div>
     </section>
+
+    <button class="btn all-recipes flex items-center justify-center gap-1.5">
+      Все рецепты
+      <Icon icon="mingcute:arrow-up-fill" class="rotate-90" color="white" width="20" height="20" />
+    </button>
   </article>
 </template>
 
@@ -112,5 +117,8 @@
 <style scoped lang="scss">
   .flip_arrow_active {
     @apply rotate-180 ease-in duration-200
+  }
+  .all-recipes {
+    @apply bg-orange text-white font-semibold
   }
 </style>

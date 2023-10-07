@@ -26,29 +26,76 @@
 
             <div class="mb-5">
               <label class="field__item mb-2">
-                <input type="text" id="calendarBirthday" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"
+                <input type="text" id="calendarBirthday" v-model="input_date_birth" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"
                     datepicker datepicker-autohide datepicker-format="dd.mm.yyyy" datepicker-orientation="bottom left" datepicker-title="Дата рождения"
                     class="entry__field">
                 <span class="label__title">Дата рождения *</span>
 
                 <span class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none">
-                  <svg class="calendar__icon transition w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                  </svg>
+                  <Icon icon="solar:calendar-bold" class="calendar__icon w-[22px] h-[22px] text-[rgba(0,0,0,.3)] transition"/>
                 </span>
               </label>
 
               <p v-if="required_date_birth === true" class="text-sm text-required-field">Заполните поле "Дата рождения"</p>
             </div>
+
+            <div class="mb-5">
+              <label class="field__item mb-2">
+                <Dropdown v-model="input_selected_gender" :options="genders" optionLabel="name"
+                          required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"
+                          class="entry__field"/>
+                <span class="label__title">Пол *</span>
+              </label>
+
+              <p v-if="required_gender === true" class="text-sm text-required-field">Заполните поле "Пол"</p>
+            </div>
           </form>
         </TabPanel>
         <TabPanel header="Логин и пароль">
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
-          </p>
+          <form>
+            <div class="mb-5">
+              <label class="field__item mb-2">
+                <input type="text" class="entry__field" v-model="input_email" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
+                <span class="label__title">Почта *</span>
+                <img src="/public/img/clear.svg" class="cross__close" @click="input_email=''" alt="Крестик">
+              </label>
+
+              <p v-if="required_email === true && input_email === ''" class="text-sm text-required-field">Заполните поле "Почта"</p>
+            </div>
+
+            <div class="mb-5">
+              <label class="field__item mb-2">
+                <input type="text" class="entry__field" v-model="input_password" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
+                <span class="label__title">Пароль *</span>
+                <img src="/public/img/clear.svg" class="cross__close" @click="input_password=''" alt="Крестик">
+              </label>
+
+              <p v-if="required_password === true && input_password === ''" class="text-sm text-required-field">Заполните поле "Пароль"</p>
+            </div>
+
+            <div class="mb-5">
+              <label class="field__item mb-2">
+                <input type="text" class="entry__field" v-model="input_repeat_password" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
+                <span class="label__title">Повторите пароль *</span>
+                <img src="/public/img/clear.svg" class="cross__close" @click="input_repeat_password=''" alt="Крестик">
+              </label>
+
+              <p v-if="required_repeat_password === true && input_repeat_password === ''" class="text-sm text-required-field">Заполните поле "Повторите пароль"</p>
+            </div>
+          </form>
         </TabPanel>
       </TabView>
+
+      <div class="flex items-center gap-2">
+        <p class="text-[rgba(0,0,0,.8)] font-medium">У вас уже есть аккаунт?
+          <span class="text-orange font-semibold" @click="$router.push('/authorization')">Авторизоваться</span>
+        </p>
+        <Icon icon="mingcute:arrow-up-fill" class="rotate-90" color="#f68b31" width="18" height="18" />
+      </div>
+
+      <button class="btn absolute bottom-0" @click="requiredField" :class="[{active: input_nickname !== '' && input_date_birth !== '' && input_selected_gender !== '' && input_email !== '' && input_password !== '' && input_repeat_password !== ''}]">
+        Зарегистрироваться
+      </button>
     </section>
   </main>
 </template>
@@ -56,16 +103,23 @@
 <script setup>
   import TabView from 'primevue/tabview';
   import TabPanel from 'primevue/tabpanel';
+  import Dropdown from "primevue/dropdown";
   import {ref} from "vue";
 
   const active = ref(0);
+
+  const input_selected_gender = ref();
+  const genders = ref([
+    { name: 'Мужской', value: 1 },
+    { name: 'Женский', value: 2 },
+  ]);
 </script>
 
 <script>
   import {Icon} from "@iconify/vue";
   import Header from "../../UI/Not-Authorized/Header.vue";
 
-  import {Datepicker} from "flowbite-datepicker";
+  // import {Datepicker} from "flowbite-datepicker";
 
   export default {
     name: 'Registration',
@@ -78,8 +132,15 @@
         page_title: 'Регистрация',
         input_nickname: '',
         input_date_birth: '',
+        input_email: '',
+        input_password: '',
+        input_repeat_password: '',
         required_nickname: false,
-        required_date_birth: false
+        required_date_birth: false,
+        required_gender: false,
+        required_email: false,
+        required_password: false,
+        required_repeat_password: false
       }
     },
     methods: {
@@ -89,6 +150,18 @@
         }
         if (this.required_date_birth === false) {
           this.required_date_birth = true
+        }
+        if (this.required_gender === false) {
+          this.required_gender = true
+        }
+        if (this.required_email === false) {
+          this.required_email = true
+        }
+        if (this.required_password === false) {
+          this.required_password = true
+        }
+        if (this.required_repeat_password === false) {
+          this.required_repeat_password = true
         }
       },
 
@@ -105,6 +178,7 @@
 </script>
 
 <style lang="scss">
+  // Клендарь
   .datepicker-cell.focused {
     @apply bg-orange text-white
   }
@@ -112,8 +186,19 @@
   .field__item .entry__field:valid ~ span .calendar__icon {
     @apply text-orange
   }
-
   //.datepicker .datepicker-cell.disabled {
   //  @apply text-gray-300
+  //}
+
+  // Пол
+  .p-dropdown-trigger svg {
+    @apply h-[19px] w-[19px] rotate-180 mr-4 text-[rgba(0,0,0,.3)]
+  }
+  .p-inputwrapper-focus {
+    border: 1px solid orange !important;
+    background: white !important;
+  }
+  //.p-inputwrapper-focus svg {
+  //  @apply rotate-0 text-orange ease-in duration-200;
   //}
 </style>

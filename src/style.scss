@@ -13,10 +13,11 @@ html {
 
 // Поле ввода
 .field__item {
-  @apply block relative h-12 w-full
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @apply block relative h-12 w-full;
 }
 .field__item .entry__field {
-  @apply absolute h-12 w-full bg-empty-field border-white rounded-[10px] transition
+  @apply absolute h-12 w-full bg-empty-field border-white rounded-[10px] transition tracking-[0.8px]
   focus:ring-0 focus:border-[1.3px] focus:bg-white focus:border-orange
   valid:border-[1px] valid:border-solid valid:border-orange valid:bg-white
 }
@@ -48,6 +49,9 @@ html {
 }
 .p-tabview-nav {
   @apply justify-between
+}
+.p-tabview-header {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .p-tabview-header .p-tabview-title {
   @apply py-2.5 px-[30px] text-[11px] font-semibold uppercase border-[1px] border-solid border-[rgba(237,237,237,.5)] rounded-2xl transition

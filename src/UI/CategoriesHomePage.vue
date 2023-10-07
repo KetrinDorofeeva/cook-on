@@ -3,8 +3,8 @@
     <div class="flex items-center justify-between mb-4">
       <div class="text-xl font-bold">Категории</div>
 
-      <div class="flex items-center">
-        <div class="text-orange font-bold mr-1.5">Все</div>
+      <div class="flex items-center gap-1.5">
+        <div class="text-orange font-bold">Все</div>
         <Icon icon="mingcute:arrow-up-fill" class="rotate-90" color="#f68b31" width="18" height="18" />
       </div>
     </div>
