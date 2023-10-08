@@ -7,7 +7,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
         {
             id: 1,
             announcement: '/soup-puree.png',
-            category: 'СУПЫ',
+            category: 'Супы',
             hashtags: [
                 {
                     id: 1,
@@ -15,6 +15,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
                 }
             ],
             title: 'Суп-пюре из тыквы со сливками',
+            translit: 'sup-pyure-iz-tykvy-so-slivkami',
             description: 'Тыква, картошка, морковь, репчатый лук, чеснок, сливочное масло, сливки 10% жирности, соль, специи',
             moreActive: false,
             calories: '74,26',
@@ -29,7 +30,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
         {
             id: 2,
             announcement: '/salad-shrimp.png',
-            category: 'САЛАТЫ',
+            category: 'Салаты',
             hashtags: [
                 {
                     id: 1,
@@ -41,6 +42,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
                 }
             ],
             title: 'Салат из креветок с огурцом и яйцом',
+            translit: 'salat-iz-krevetok-s-ogurcom-i-yajcom',
             description: 'Креветки, куриное яйцо, огурец, твердый сыр, майонез, соль, укроп',
             moreActive: false,
             calories: '201,92',
@@ -55,7 +57,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
         {
             id: 3,
             announcement: '/grated-cherry-pie.png',
-            category: 'ПИРОГИ',
+            category: 'Пироги',
             hashtags: [
                 {
                     id: 1,
@@ -63,6 +65,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
                 }
             ],
             title: 'Тертый пирог с вишней',
+            translit: 'tertyj-pirog-s-vishnej',
             description: 'Пшеничная мука хлебопекарная, сливочное масло, сахар, ванильный сахар, молоко, куриное яйцо, разрыхлитель теста, соль, вишня, картофельный крахмал',
             moreActive: false,
             calories: '263,83',
@@ -77,7 +80,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
         {
             id: 4,
             announcement: '/cocoa-with-ice-cream.png',
-            category: 'НАПИТКИ',
+            category: 'Напитки',
             hashtags: [
                 {
                     id: 1,
@@ -85,6 +88,7 @@ export const useRecipeDetails = defineStore('recipeDetails', () => {
                 }
             ],
             title: 'Какао с мороженым',
+            translit: 'kakao-s-morozhenym',
             description: 'Молоко, какао-порошек, сахар, пломбир, темный шоколад',
             moreActive: false,
             calories: '145,63',

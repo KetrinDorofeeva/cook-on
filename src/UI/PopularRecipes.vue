@@ -13,7 +13,7 @@
       <div class="shadow-card-main rounded-b-xl" v-for="recipe in recipeDetails.recipes" :key="recipe.id">
         <div class="relative">
           <section class="flex items-center absolute left-5 bottom-2.5">
-            <div class="bg-category rounded-[10px] text-xs font-semibold px-[9px] py-[6px]">{{recipe.category}}</div>
+            <div class="bg-category rounded-[10px] text-xs font-semibold px-[9px] py-[6px] uppercase">{{recipe.category}}</div>
             <div v-for="hashtag in recipe.hashtags" :key="hashtag.id" class="[&:not(:first-child)]:ml-2 bg-category-hashtag rounded-[10px] text-xs font-semibold text-white px-[9px] py-[6px]">
               #{{hashtag.name}}
             </div>
@@ -84,7 +84,11 @@
               </div>
             </div>
 
-            <button class="px-4 py-1.5 bg-orange text-white font-semibold rounded-[10px]">К рецепту</button>
+            <router-link
+                :to="{name: 'recipePage', params: {id: recipe.id, title: recipe.title, category: recipe.category, announcement: recipe.announcement, hashtags: hashtag in recipe.hashtags}}"
+                class="px-4 py-1.5 bg-orange text-white font-semibold rounded-[10px]">
+              К рецепту
+            </router-link>
           </div>
         </div>
       </div>
@@ -111,6 +115,7 @@
     components: {
       Icon
     },
+    props: {}
   }
 </script>
 

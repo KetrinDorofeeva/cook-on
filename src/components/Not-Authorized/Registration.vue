@@ -2,16 +2,16 @@
   <Header></Header>
 
   <main class="px-5 mb-8">
-    <section class="flex items-center gap-1.5 mb-5">
-      <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="22" height="22" />
-      <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="26" height="26" />
+    <section class="flex items-center gap-1 text-xs mb-5">
+      <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="20" height="20" />
+      <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="24" height="24" />
       <p class="font-medium text-[rgba(0,0,0,.3)]">{{page_title}}</p>
     </section>
 
     <section class="relative h-screen">
       <h1 class="text-2xl font-semibold mb-6">{{page_title}}</h1>
 
-      <TabView v-model:activeIndex="active">
+      <TabView v-model:activeIndex="active" class="registration__tabs">
         <TabPanel header="Личная информация">
           <form>
             <div class="mb-5">
@@ -104,8 +104,8 @@
   import TabView from 'primevue/tabview';
   import TabPanel from 'primevue/tabpanel';
   import Dropdown from "primevue/dropdown";
-  import {ref} from "vue";
 
+  import {ref} from "vue";
   const active = ref(0);
 
   const input_selected_gender = ref();
@@ -178,7 +178,11 @@
 </script>
 
 <style lang="scss">
-  // Клендарь
+  .registration__tabs .p-tabview-header .p-tabview-title {
+    @apply px-[30px]
+  }
+
+  // Календарь
   .datepicker-cell.focused {
     @apply bg-orange text-white
   }

@@ -2,9 +2,9 @@
   <Header></Header>
 
   <main class="px-5 mb-8">
-    <section class="flex items-center gap-1.5 mb-5">
-      <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="22" height="22" />
-      <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="26" height="26" />
+    <section class="flex items-center gap-1 text-xs mb-5">
+      <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="20" height="20" />
+      <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="24" height="24" />
       <p class="font-medium text-[rgba(0,0,0,.3)]">{{page_title}}</p>
     </section>
 
