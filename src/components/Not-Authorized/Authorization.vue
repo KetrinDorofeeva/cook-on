@@ -2,11 +2,11 @@
   <Header></Header>
 
   <main class="px-5 mb-8">
-    <section class="flex items-center gap-1 text-xs mb-5">
+    <article class="flex items-center gap-1 text-xs mb-5">
       <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="20" height="20" />
       <Icon icon="iconamoon:arrow-right-2-light" color="rgba(0,0,0,.3)" width="24" height="24" />
       <p class="font-medium text-[rgba(0,0,0,.3)]">{{page_title}}</p>
-    </section>
+    </article>
 
     <section class="relative h-screen">
       <h1 class="text-2xl font-semibold mb-6">{{page_title}}</h1>

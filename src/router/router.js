@@ -18,7 +18,7 @@ const routes = [
         component: Registration
     },
     {
-        path: '/recipe-page/:id:title:category:announcement:hashtags',
+        path: '/recipe-page/:id:title:category:announcement:hashtags:description:detailedDescription',
         component: RecipePage,
         name: 'recipePage',
         props: true

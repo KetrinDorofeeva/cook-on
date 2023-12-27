@@ -38,34 +38,34 @@
           <!-- Выпадающий список (кКал, сложность, время, БЖУ) -->
           <div class="mb-6" v-if="recipe.moreActive === true">
             <div class="flex items-center justify-between px-5 mb-4">
-              <div class="flex items-center">
+              <div class="flex items-center gap-2">
                 <Icon icon="bi:pie-chart-fill" color="#f4b990" width="19" height="19" />
-                <p class="text-more ml-2 font-medium">{{recipe.calories}} кКал</p>
+                <p class="text-more font-medium">{{recipe.calories}} кКал</p>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center gap-2">
                 <Icon icon="emojione-monotone:pot-of-food" color="#f4b990" width="22" height="22" />
-                <p class="text-more ml-2 font-medium">{{recipe.complexity}}</p>
+                <p class="text-more font-medium">{{recipe.complexity}}</p>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center gap-2">
                 <Icon icon="wi:time-3" color="#f4b990" width="22" height="22" />
-                <p class="text-more ml-2 font-medium">{{recipe.time}}.</p>
+                <p class="text-more font-medium">{{recipe.time}}.</p>
               </div>
             </div>
 
             <hr class="h-px bg-hr w-full mb-4">
 
             <div class="flex items-center justify-between px-5 mb-4">
-              <div class="flex items-center">
+              <div class="flex items-center gap-2">
                 <Icon icon="file-icons:dna" color="#f4b990" width="22" height="22" />
-                <p class="text-more ml-2 font-medium">{{recipe.proteins}} г.</p>
+                <p class="text-more font-medium">{{recipe.proteins}} г.</p>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center gap-2">
                 <Icon icon="ph:drop-bold" color="#f4b990" width="22" height="22" />
-                <p class="text-more ml-2 font-medium">{{recipe.fats}} г.</p>
+                <p class="text-more font-medium">{{recipe.fats}} г.</p>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center gap-2">
                 <Icon icon="lucide:wheat" color="#f4b990" width="22" height="22" />
-                <p class="text-more ml-2 font-medium">{{recipe.carbohydrates}} г.</p>
+                <p class="text-more font-medium">{{recipe.carbohydrates}} г.</p>
               </div>
             </div>
 
@@ -78,14 +78,14 @@
                 <Icon icon="ph:heart-bold" v-if="!recipe.toFavorites" color="#dd727b" width="30" height="30" />
                 <Icon icon="ph:heart-fill" v-else color="#dd727b" width="30" height="30" />
               </div>
-              <div class="flex items-center">
-                <Icon icon="ph:star-fill" class="ml-6" color="#f7d000" width="30" height="30" />
-                <p class="text-[rgba(0,0,0,.7)] font-medium ml-2">{{recipe.grade}}</p>
+              <div class="flex items-center gap-2 ml-6">
+                <Icon icon="ph:star-fill" color="#f7d000" width="30" height="30" />
+                <p class="text-[rgba(0,0,0,.7)] font-medium">{{recipe.grade}}</p>
               </div>
             </div>
 
             <router-link
-                :to="{name: 'recipePage', params: {id: recipe.id, title: recipe.title, category: recipe.category, announcement: recipe.announcement, hashtags: hashtag in recipe.hashtags}}"
+                :to="{name: 'recipePage', params: {id: recipe.id, title: recipe.title, category: recipe.category, announcement: recipe.announcement, hashtags: hashtag in recipe.hashtags, description: recipe.description, detailedDescription: recipe.detailedDescription}}"
                 class="px-4 py-1.5 bg-orange text-white font-semibold rounded-[10px]">
               К рецепту
             </router-link>
