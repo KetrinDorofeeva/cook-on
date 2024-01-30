@@ -13,6 +13,7 @@
     </article>
 
     <TabView v-model:activeIndex="active" class="recipe__page mb-7">
+      <!-- Обзор -->
       <TabPanel header="Обзор">
         <img :src="`/public/img/popular${announcement}`" class="mb-6" :alt="title">
 
@@ -112,8 +113,130 @@
           </section>
         </article>
       </TabPanel>
+
+      <!-- Ингредиенты -->
       <TabPanel header="Ингредиенты">
+        <article class="px-5 mb-8">
+          <div class="text-lg font-semibold mb-4">Количество порций</div>
+          <section class="flex items-center gap-3.5">
+            <div class="counter_click flex justify-center items-center w-[46px] h-[39px] bg-white drop-shadow-[0_0_3px_rgba(0,0,0,.2)] rounded-xl">
+              <Icon icon="ic:round-minus" @click="counterMinus" color="#f68b31" width="32" height="32" />
+            </div>
+            <div class="flex justify-center items-center text-xl w-[46px] h-[39px] bg-white drop-shadow-[0_0_3px_rgba(0,0,0,.2)] rounded-xl">{{number_servings}}</div>
+            <div class="counter_click flex justify-center items-center w-[46px] h-[39px] bg-white drop-shadow-[0_0_3px_rgba(0,0,0,.2)] rounded-xl">
+              <Icon icon="ic:round-plus" @click="counterPlus" color="#f68b31" width="32" height="32" />
+            </div>
+          </section>
+        </article>
+
+        <article class="px-5 mb-8">
+          <div class="text-lg font-semibold">Основные ингредиенты</div>
+          <section class="relative">
+            <div class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+              <p>Пшеничная мука хлебопекарная</p>
+              <div class="flex items-center gap-4">
+                <p class="whitespace-nowrap">66,67 г</p>
+                <Icon icon="fa6-solid:list-ul" @click="units = true" class="listUl cursor-pointer" color="#f68b31" width="20" height="20" />
+              </div>
+            </div>
+
+            <!-- Единицы измерения -->
+            <div class="units_container text-[rgba(0,0,0,.8)]" v-if="units === true" :class="[{show: units === true}]">
+              <div class="flex justify-end border-b-[1.5px] bg-[rgba(246,139,49,.03)] border-solid border-[#EDEDED]">
+                <span class="px-3 py-2">грамм (г)</span>
+              </div>
+              <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
+                <span class="px-3 py-2">миллиграмм (мг)</span>
+              </div>
+              <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
+                <span class="px-3 py-2">килограмм (кг)</span>
+              </div>
+              <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
+                <span class="px-3 py-2">столовая ложка (ст.л)</span>
+              </div>
+              <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
+                <span class="px-3 py-2">чайная ложка (ч.л)</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Сливочное масло</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">30 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Сахар</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">16,67 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Молоко</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">0,5 ст.л</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Куриное яйцо</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">10 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Ванильный сахар</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">0,17 ст.л</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Разрыхлитель теста</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">0,83 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Соль</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">0,83 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+        </article>
+
+        <article class="px-5">
+          <div class="text-lg font-semibold">Для начинки</div>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Вишня</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">83,33 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Картофельный крахмал</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">9,33 г</p>
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+            </div>
+          </section>
+          <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
+            <p>Сахар</p>
+            <div class="flex items-center gap-4">
+              <p class="whitespace-nowrap">по вкусу</p>
+            </div>
+          </section>
+        </article>
       </TabPanel>
+
+      <!-- Приготовление -->
       <TabPanel header="Приготовление">
       </TabPanel>
     </TabView>
@@ -159,8 +282,28 @@
     },
     data() {
       return {
-        hide_description: true
+        hide_description: true,
+        number_servings: 1,
+        units: false,
       }
+    },
+    methods: {
+      counterPlus: function () {
+          return this.number_servings++
+      },
+      counterMinus: function () {
+        if (this.number_servings > 1) {
+          return this.number_servings--
+        }
+      }
+    },
+    created() {
+      window.addEventListener('click', e => {
+        const target = e.target
+        if (!target.closest('.listUl') && !target.closest('.units_container')) {
+          this.units = false
+        }
+      })
     },
   }
 </script>
@@ -171,5 +314,34 @@
  }
  .show_more {
    -webkit-line-clamp: unset !important;
+ }
+ .p-tabview-nav-container {
+   margin-bottom: 28px !important;
+ }
+ .counter_click:active {
+   box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+   transition: .09s
+ }
+
+ .units_container {
+   @apply hidden
+ }
+ .units_container.show {
+   @apply block absolute right-0 top-14 bg-white shadow-[0_0_4px_rgba(0,0,0,.2)] rounded-xl;
+   animation: avia_pop .3s 1 cubic-bezier(.175,.885,.32,1.275);
+ }
+ @keyframes avia_pop {
+   0% {
+     transform: scale(.8);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+ .units_container div {
+   @apply transition-[.3s] cursor-pointer;
+ }
+ .units_container div:hover {
+   @apply bg-[rgba(246,139,49,.03)]
  }
 </style>
