@@ -136,7 +136,7 @@
               <p>Пшеничная мука хлебопекарная</p>
               <div class="flex items-center gap-4">
                 <p class="whitespace-nowrap">66,67 г</p>
-                <Icon icon="fa6-solid:list-ul" @click="units = true" class="listUl cursor-pointer" color="#f68b31" width="20" height="20" />
+                <Icon icon="fa6-solid:list-ul" @click="units = true" class="list_ul cursor-pointer" color="#f68b31" width="20" height="20" />
               </div>
             </div>
 
@@ -148,7 +148,7 @@
               <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
                 <span class="px-3 py-2">миллиграмм (мг)</span>
               </div>
-              <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
+               <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
                 <span class="px-3 py-2">килограмм (кг)</span>
               </div>
               <div class="flex justify-end border-b-[1.5px] border-solid border-[#EDEDED]">
@@ -164,49 +164,49 @@
             <p>Сливочное масло</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">30 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Сахар</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">16,67 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Молоко</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">0,5 ст.л</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Куриное яйцо</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">10 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Ванильный сахар</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">0,17 ст.л</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Разрыхлитель теста</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">0,83 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Соль</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">0,83 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
         </article>
@@ -217,14 +217,14 @@
             <p>Вишня</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">83,33 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
             <p>Картофельный крахмал</p>
             <div class="flex items-center gap-4">
               <p class="whitespace-nowrap">9,33 г</p>
-              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="listUl cursor-pointer" width="20" height="20" />
+              <Icon icon="fa6-solid:list-ul" color="#f68b31" class="list_ul cursor-pointer" width="20" height="20" />
             </div>
           </section>
           <section class="flex items-center justify-between gap-28 border-b border-solid border-[rgba(237,237,237,.5)] py-3">
@@ -238,6 +238,76 @@
 
       <!-- Приготовление -->
       <TabPanel header="Приготовление">
+        <article class="px-5 mb-8">
+          <div class="text-lg font-semibold mb-5">Пошаговый рецепт</div>
+
+          <article class="grid grid-cols-1 gap-5">
+            <div class="px-[18px] pt-5 pb-7 rounded-[20px] shadow-[0_0_8px_rgba(0,0,0,.1)]">
+              <div class="px-5 py-2.5 w-min text-sm font-semibold uppercase bg-category rounded-lg whitespace-nowrap">Подготовка</div>
+              <img :src="`/public/img/step-by-step_recipe/preparation.png`" class="rounded-[20px] mt-4 w-full" alt="Подготовка">
+              <p class="text-justify mt-4">Вишню вымойте, обсушите, удалите косточки. Если используете замороженные ягоды, разморозьте их и слейте лишнюю жидкость. Замороженное сливочное масло натрите на терке. Подготовьте форму для выпечки. Включите духовку на 200 градусов.</p>
+              <div class="flex items-center justify-between mt-8">
+                <section class="relative flex items-center cursor-pointer">
+                  <div class="p-2.5 rounded-full border-[1.5px] border-solid border-orange bg-white z-20">
+                    <Icon icon="pajamas:timer" color="#F68B31" width="26px" height="26px" />
+                  </div>
+                  <div class="absolute left-2.5 py-[8px] pr-3 pl-12 font-bold text-orange border-[1.5px] border-solid border-orange z-10 rounded-xl whitespace-nowrap">10 мин</div>
+                </section>
+                <section class="relative cursor-pointer">
+                  <div @click="note = true" class="note_block p-1.5 rounded-full border-[1.5px] border-solid border-orange bg-white">
+                    <Icon icon="heroicons-outline:light-bulb" color="#F68B31" width="32px" height="32px" />
+                  </div>
+
+                  <!-- Примечание -->
+                  <div class="note_container px-3 py-2 text-sm min-w-[300px] text-justify text-[rgba(33,33,33,.8)]" v-if="note === true" :class="[{show: note === true}]">
+                    Часть пшеничной муки замените цельнозерновой или кукурузной, сахар используйте тростниковый.
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <div class="px-[18px] pt-5 pb-7 rounded-[20px] shadow-[0_0_8px_rgba(0,0,0,.1)]">
+              <div class="flex items-center justify-between">
+                <div class="px-5 py-2.5 w-min text-sm font-semibold uppercase bg-category rounded-lg whitespace-nowrap">Шаг 1</div>
+                <div class="flex items-center gap-2">
+                  <Icon icon="wi:time-3" color="#f4b990" width="22" height="22" />
+                  <p class="font-medium text-[rgba(0,0,0,.6)]">1 ч</p>
+                </div>
+              </div>
+              <p class="text-justify mt-4">Подготовьте тесто. Объедините все сыпучие продукты для теста, смешайте их. Затем добавьте тертое сливочное масло, вбейте яйцо и влейте молоко, активно вымесите. Разделите тесто на две части, оберните пищевой пленкой и отправьте охлаждаться на 1 час.</p>
+            </div>
+
+            <div class="px-[18px] pt-5 pb-7 rounded-[20px] shadow-[0_0_8px_rgba(0,0,0,.1)]">
+              <div class="flex items-center justify-between">
+                <div class="px-5 py-2.5 w-min text-sm font-semibold uppercase bg-category rounded-lg whitespace-nowrap">Шаг 2</div>
+                <div class="flex items-center gap-2">
+                  <Icon icon="wi:time-3" color="#f4b990" width="22" height="22" />
+                  <p class="font-medium text-[rgba(0,0,0,.6)]">20 мин</p>
+                </div>
+              </div>
+              <img :src="`/public/img/step-by-step_recipe/step_2.png`" class="rounded-[20px] mt-4 w-full" alt="Шаг 2">
+              <p class="text-justify mt-4">Начните формировать пирог. Затем на листе пергамента раскатайте один кусок теста в пласт по величине немного больше подготовленной формы. Выложите его туда вместе с пергаментом, формируя небольшие бортики. Вишню соедините с крахмалом и сахаром, выложите на заготовку.</p>
+            </div>
+
+            <div class="px-[18px] pt-5 pb-7 rounded-[20px] shadow-[0_0_8px_rgba(0,0,0,.1)]">
+              <div class="flex items-center justify-between">
+                <div class="px-5 py-2.5 w-min text-sm font-semibold uppercase bg-category rounded-lg whitespace-nowrap">Шаг 3</div>
+                <div class="flex items-center gap-2">
+                  <Icon icon="wi:time-3" color="#f4b990" width="22" height="22" />
+                  <p class="font-medium text-[rgba(0,0,0,.6)]">30 мин</p>
+                </div>
+              </div>
+              <img :src="`/public/img/step-by-step_recipe/step_3.png`" class="rounded-[20px] mt-4 w-full" alt="Шаг 3">
+              <p class="text-justify mt-4">Завершите приготовление пирога. Оставшуюся часть теста натрите на терке и распределите по ягодной основе. Поставьте пирог в средний отдел духового шкафа на 30 минут.</p>
+            </div>
+
+            <div class="px-[18px] pt-5 pb-7 rounded-[20px] shadow-[0_0_8px_rgba(0,0,0,.1)]">
+              <div class="px-5 py-2.5 w-min text-sm font-semibold uppercase bg-category rounded-lg whitespace-nowrap">Произвести впечатление</div>
+              <img :src="`/public/img/step-by-step_recipe/to_make_an_impression.png`" class="rounded-[20px] mt-4 w-full" alt="Подготовка">
+              <p class="text-justify mt-4">Дайте выпечке немного остыть, затем разрежьте на кусочки, положите на порционные тарелки и подайте к столу.</p>
+            </div>
+          </article>
+        </article>
       </TabPanel>
     </TabView>
   </main>
@@ -285,6 +355,7 @@
         hide_description: true,
         number_servings: 1,
         units: false,
+        note: false,
       }
     },
     methods: {
@@ -300,8 +371,11 @@
     created() {
       window.addEventListener('click', e => {
         const target = e.target
-        if (!target.closest('.listUl') && !target.closest('.units_container')) {
+        if (!target.closest('.list_ul') && !target.closest('.units_container')) {
           this.units = false
+        }
+        if (!target.closest('.note_block') && !target.closest('.note_container')) {
+          this.note = false
         }
       })
     },
@@ -323,20 +397,13 @@
    transition: .09s
  }
 
- .units_container {
+ .units_container,
+ .note_container {
    @apply hidden
  }
  .units_container.show {
    @apply block absolute right-0 top-14 bg-white shadow-[0_0_4px_rgba(0,0,0,.2)] rounded-xl;
    animation: avia_pop .3s 1 cubic-bezier(.175,.885,.32,1.275);
- }
- @keyframes avia_pop {
-   0% {
-     transform: scale(.8);
-   }
-   100% {
-     transform: scale(1);
-   }
  }
  .units_container div {
    @apply transition-[.3s] cursor-pointer;
@@ -344,4 +411,17 @@
  .units_container div:hover {
    @apply bg-[rgba(246,139,49,.03)]
  }
+
+ .note_container.show {
+   @apply block absolute right-0 bottom-14 bg-white shadow-[0_0_4px_rgba(0,0,0,.2)] rounded-xl;
+   animation: avia_pop .3s 1 cubic-bezier(.175,.885,.32,1.275);
+ }
+ @keyframes avia_pop {
+    0% {
+      transform: scale(.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 </style>
