@@ -11,7 +11,7 @@
     <section class="relative h-screen">
       <h1 class="text-2xl font-semibold mb-6">{{page_title}}</h1>
 
-      <form>
+      <form @submit.prevent="signIn">
         <div class="mb-5">
           <label class="field__item mb-2">
             <input type="text" class="entry__field" v-model="input_login" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
@@ -52,6 +52,7 @@
 <script>
   import {Icon} from "@iconify/vue";
   import Header from "../../UI/Not-Authorized/Header.vue";
+  import {useUserStore} from "../../store/UserStore.js";
 
   export default {
     name: 'Authorization',
@@ -59,13 +60,17 @@
       Icon,
       Header
     },
+    setup() {
+      const userStore = useUserStore();
+      return {userStore}
+    },
     data() {
       return {
         page_title: 'Авторизация',
         input_login: '',
         input_password: '',
         required_login: false,
-        required_password: false
+        required_password: false,
       }
     },
     methods: {
@@ -75,6 +80,19 @@
         }
         if (this.required_password === false) {
           this.required_password = true
+        }
+      },
+      signIn() {
+        if(this.input_login && this.input_password) {
+          if (this.input_login === this.userStore.users.eMail && this.input_password === this.userStore.users.password) {
+            const parsed = JSON.stringify(this.userStore.users);
+            localStorage.setItem('users', parsed);
+
+            if (localStorage.getItem('users') != null) {
+              this.$router.push(`/`);
+              this.userStore.auth = true;
+            }
+          }
         }
       }
     }
