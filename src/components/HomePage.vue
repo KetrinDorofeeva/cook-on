@@ -1,7 +1,7 @@
 <template>
   <Header></Header>
 
-  <main class="px-5 mb-24">
+  <main class="px-5 mb-8" :class="[{menu_bottom: userStore.auth === true}]">
     <PersonalHomePage v-if="userStore.auth === true"></PersonalHomePage>
     <CategoriesHomePage></CategoriesHomePage>
     <PopularRecipes></PopularRecipes>
@@ -26,5 +26,7 @@
 </script>
 
 <style scoped lang="scss">
-
+  .menu_bottom {
+    @apply mb-24
+  }
 </style>
