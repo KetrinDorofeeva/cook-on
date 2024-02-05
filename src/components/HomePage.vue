@@ -1,7 +1,7 @@
 <template>
   <Header></Header>
 
-  <main class="px-5 mb-8">
+  <main class="px-5 mb-24">
     <PersonalHomePage v-if="userStore.auth === true"></PersonalHomePage>
     <CategoriesHomePage></CategoriesHomePage>
     <PopularRecipes></PopularRecipes>
