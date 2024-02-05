@@ -342,7 +342,7 @@
 
 <script>
   import {Icon} from "@iconify/vue";
-  import Header from "../UI/Not-Authorized/Header.vue";
+  import Header from "../UI/Header.vue";
 
   export default {
     name: 'RecipePage',

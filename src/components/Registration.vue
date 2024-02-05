@@ -18,7 +18,7 @@
               <label class="field__item mb-2">
                 <input type="text" class="entry__field" v-model="input_nickname" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
                 <span class="label__title">Никнейм *</span>
-                <img src="/public/img/clear.svg" class="cross__close" @click="input_nickname=''" alt="Крестик">
+                <img src="/img/clear.svg" class="cross__close" @click="input_nickname=''" alt="Крестик">
               </label>
 
               <p v-if="required_nickname === true && input_nickname === ''" class="text-sm text-required-field">Заполните поле "Никнейм"</p>
@@ -57,7 +57,7 @@
               <label class="field__item mb-2">
                 <input type="text" class="entry__field" v-model="input_email" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
                 <span class="label__title">Почта *</span>
-                <img src="/public/img/clear.svg" class="cross__close" @click="input_email=''" alt="Крестик">
+                <img src="/img/clear.svg" class="cross__close" @click="input_email=''" alt="Крестик">
               </label>
 
               <p v-if="required_email === true && input_email === ''" class="text-sm text-required-field">Заполните поле "Почта"</p>
@@ -67,7 +67,7 @@
               <label class="field__item mb-2">
                 <input type="text" class="entry__field" v-model="input_password" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
                 <span class="label__title">Пароль *</span>
-                <img src="/public/img/clear.svg" class="cross__close" @click="input_password=''" alt="Крестик">
+                <img src="/img/clear.svg" class="cross__close" @click="input_password=''" alt="Крестик">
               </label>
 
               <p v-if="required_password === true && input_password === ''" class="text-sm text-required-field">Заполните поле "Пароль"</p>
@@ -77,7 +77,7 @@
               <label class="field__item mb-2">
                 <input type="text" class="entry__field" v-model="input_repeat_password" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
                 <span class="label__title">Повторите пароль *</span>
-                <img src="/public/img/clear.svg" class="cross__close" @click="input_repeat_password=''" alt="Крестик">
+                <img src="/img/clear.svg" class="cross__close" @click="input_repeat_password=''" alt="Крестик">
               </label>
 
               <p v-if="required_repeat_password === true && input_repeat_password === ''" class="text-sm text-required-field">Заполните поле "Повторите пароль"</p>
@@ -117,7 +117,7 @@
 
 <script>
   import {Icon} from "@iconify/vue";
-  import Header from "../../UI/Not-Authorized/Header.vue";
+  import Header from "../UI/Header.vue";
 
   // import {Datepicker} from "flowbite-datepicker";
 

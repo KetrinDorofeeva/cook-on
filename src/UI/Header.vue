@@ -20,7 +20,7 @@
 
 <script>
   import {Icon} from "@iconify/vue";
-  import {useUserStore} from "../../store/UserStore.js";
+  import {useUserStore} from "../store/UserStore.js";
 
   export default {
     name: 'Header',

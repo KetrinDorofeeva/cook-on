@@ -16,7 +16,7 @@
           <label class="field__item mb-2">
             <input type="text" class="entry__field" v-model="input_login" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
             <span class="label__title">Логин</span>
-            <img src="/public/img/clear.svg" class="cross__close" @click="input_login=''" alt="Крестик">
+            <img src="/img/clear.svg" class="cross__close" @click="input_login=''" alt="Крестик">
           </label>
 
           <p v-if="required_login === true && input_login === ''" class="text-sm text-required-field">Заполните поле "Логин"</p>
@@ -28,10 +28,12 @@
           <label class="field__item mb-2">
             <input type="password" class="entry__field" v-model="input_password" required oninvalid="this.setCustomValidity(' ')" oninput="setCustomValidity('')"/>
             <span class="label__title">Пароль</span>
-            <img src="/public/img/clear.svg" class="cross__close" @click="input_password=''" alt="Крестик">
+            <img src="/img/clear.svg" class="cross__close" @click="input_password=''" alt="Крестик">
           </label>
 
           <p v-if="required_password === true && input_password === ''" class="text-sm text-required-field">Заполните поле "Пароль"</p>
+
+          <p v-if="invalid === true" class="text-sm text-required-field">Неверный логин или пароль</p>
         </div>
 
         <div class="flex items-center gap-2">
@@ -51,8 +53,8 @@
 
 <script>
   import {Icon} from "@iconify/vue";
-  import Header from "../../UI/Not-Authorized/Header.vue";
-  import {useUserStore} from "../../store/UserStore.js";
+  import Header from "../UI/Header.vue";
+  import {useUserStore} from "../store/UserStore.js";
 
   export default {
     name: 'Authorization',
@@ -71,6 +73,7 @@
         input_password: '',
         required_login: false,
         required_password: false,
+        invalid: false,
       }
     },
     methods: {
@@ -83,7 +86,11 @@
         }
       },
       signIn() {
-        if(this.input_login && this.input_password) {
+        if ((this.userStore.users.eMail !== this.input_login && this.input_login !== '') || (this.userStore.users.password !== this.input_password && this.input_password !== '')) {
+          this.invalid = true
+        }
+
+        if (this.input_login && this.input_password) {
           if (this.input_login === this.userStore.users.eMail && this.input_password === this.userStore.users.password) {
             const parsed = JSON.stringify(this.userStore.users);
             localStorage.setItem('users', parsed);
