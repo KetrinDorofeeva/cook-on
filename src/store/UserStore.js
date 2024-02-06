@@ -9,7 +9,7 @@ export const useUserStore = defineStore('userStore', () => {
         nikname: 'kdorf7',
         dateBirth: '22.05.2001',
         gender: 'Женщина',
-        eMail: 'multiveb@mail.ru',
+        eMail: 'test',
         password: 'test',
     });
 

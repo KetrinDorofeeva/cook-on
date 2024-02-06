@@ -103,6 +103,8 @@
           <p class="text-xs text-center text-[rgba(0,0,0,.6)] leading-[18px]">Пищевая ценность на 100 г. Калорийность рассчитана для сырых продуктов</p>
         </article>
 
+        <RecipeEvaluation v-if="userStore.auth === true"></RecipeEvaluation>
+
         <article class="px-5">
           <p class="text-xl font-semibold uppercase tracking-[0.8px]">Комментарии <span class="font-normal text-[rgba(0,0,0,.5)]">(2)</span></p>
 
@@ -316,8 +318,13 @@
 <script setup>
   import { useRoute } from "vue-router";
 
+  import {useUserStore} from "../store/UserStore.js";
+  const userStore = useUserStore();
+
   import {useRecipeDetails} from "../store/RecipeDetails.js";
   const recipeDetails = useRecipeDetails();
+
+  import RecipeEvaluation from "../UI/RecipeEvaluation.vue";
 
   import TabView from 'primevue/tabview';
   import TabPanel from 'primevue/tabpanel';
@@ -336,16 +343,12 @@
 
   // Комментарии
   import {useCommentDetails} from "../store/CommentDetails.js";
-
   const commentDetails = useCommentDetails();
 </script>
 
 <script>
   import {Icon} from "@iconify/vue";
   import Header from "../UI/Header.vue";
-
-  import {useUserStore} from "../store/UserStore.js";
-  const userStore = useUserStore();
 
   export default {
     name: 'RecipePage',
