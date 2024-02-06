@@ -26,7 +26,5 @@
 </script>
 
 <style scoped lang="scss">
-  .menu_bottom {
-    @apply mb-24
-  }
+
 </style>

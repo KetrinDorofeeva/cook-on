@@ -1,7 +1,7 @@
 <template>
   <Header></Header>
 
-  <main class="mb-8">
+  <main class="mb-8" :class="[{menu_bottom: userStore.auth === true}]">
     <article class="px-5 mb-5 text-xs">
       <section class="flex items-center gap-1">
         <Icon icon="ph:house-bold" @click="$router.push('/')" color="#f68b31" width="20" height="20" />
@@ -343,6 +343,9 @@
 <script>
   import {Icon} from "@iconify/vue";
   import Header from "../UI/Header.vue";
+
+  import {useUserStore} from "../store/UserStore.js";
+  const userStore = useUserStore();
 
   export default {
     name: 'RecipePage',

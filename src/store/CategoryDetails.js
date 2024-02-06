@@ -34,6 +34,26 @@ export const useCategoryDetails = defineStore('categoryDetails', () => {
             announcement: '/category-beverages.png',
             title: 'Напитки'
         },
+        {
+            id: 7,
+            announcement: '/category-desserts.png',
+            title: 'Десерты'
+        },
+        {
+            id: 8,
+            announcement: '/category-cakes.png',
+            title: 'Торты'
+        },
+        {
+            id: 9,
+            announcement: '/category-sauces.png',
+            title: 'Соусы'
+        },
+        {
+            id: 10,
+            announcement: '/category-side-dishes.png',
+            title: 'Гарниры'
+        },
     ]);
 
     return {

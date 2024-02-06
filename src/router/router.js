@@ -3,6 +3,7 @@ import HomePage from "../components/HomePage.vue";
 import Authorization from "../components/Authorization.vue";
 import Registration from "../components/Registration.vue";
 import RecipePage from "../components/RecipePage.vue";
+import CategoriesPage from "../components/CategoriesPage.vue";
 
 const routes = [
     {
@@ -23,6 +24,10 @@ const routes = [
         name: 'recipePage',
         props: true
     },
+    {
+        path: '/categories',
+        component: CategoriesPage
+    }
 ];
 
 const router = createRouter({

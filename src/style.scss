@@ -11,6 +11,11 @@ html {
   color: #212121;
 }
 
+// Отступ снизу перед нижнем меню
+.menu_bottom {
+  @apply mb-24
+}
+
 // Полоса прокрутки
 ::-webkit-scrollbar {
   width: 9px;
