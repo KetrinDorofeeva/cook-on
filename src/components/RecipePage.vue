@@ -105,15 +105,7 @@
 
         <RecipeEvaluation v-if="userStore.auth === true"></RecipeEvaluation>
 
-        <article class="px-5">
-          <p class="text-xl font-semibold uppercase tracking-[0.8px]">Комментарии <span class="font-normal text-[rgba(0,0,0,.5)]">(2)</span></p>
-
-          <section class="border-b border-solid border-[rgba(237,237,237,.5)] py-3" v-for="comment in commentDetails.comments" :key="comment.id">
-            <p class="font-bold text-lg mb-1.5">{{comment.commentator}}</p>
-            <p class="font-light text-[rgba(0,0,0,.8)] text-justify mb-3">{{comment.text}}</p>
-            <p class="font-light text-[rgba(0,0,0,.6)] text-sm">{{comment.date}} в {{comment.time}}</p>
-          </section>
-        </article>
+        <Comments></Comments>
       </TabPanel>
 
       <!-- Ингредиенты -->
@@ -316,6 +308,9 @@
 </template>
 
 <script setup>
+  import Comments from "../UI/Comments.vue";
+  import RecipeEvaluation from "../UI/RecipeEvaluation.vue";
+
   import { useRoute } from "vue-router";
 
   import {useUserStore} from "../store/UserStore.js";
@@ -324,12 +319,11 @@
   import {useRecipeDetails} from "../store/RecipeDetails.js";
   const recipeDetails = useRecipeDetails();
 
-  import RecipeEvaluation from "../UI/RecipeEvaluation.vue";
-
   import TabView from 'primevue/tabview';
   import TabPanel from 'primevue/tabpanel';
 
   import {computed, ref} from "vue";
+
   const active = ref(0);
 
   // Элементы рецепта
@@ -340,10 +334,6 @@
   const announcement = computed(() => route.params.announcement);
   const hashtags = computed(() => route.params.hashtags);
   const detailedDescription = computed(() => route.params.detailedDescription);
-
-  // Комментарии
-  import {useCommentDetails} from "../store/CommentDetails.js";
-  const commentDetails = useCommentDetails();
 </script>
 
 <script>

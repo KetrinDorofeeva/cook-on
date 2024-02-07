@@ -30,6 +30,10 @@ html {
   background-color: hsl(27, 92%, 56%);
 }
 
+::placeholder {
+  @apply text-[rgba(36,31,32,.5)]
+}
+
 // Поле ввода
 .field__item {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
