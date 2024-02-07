@@ -11,8 +11,10 @@
 
     <section class="grid grid-cols-2 gap-2.5">
       <div class="relative" v-for="category in categoryDetails.categories" :key="category.id">
-        <div class="absolute text-white font-bold left-3.5 bottom-2">{{category.title}}</div>
-        <img :src="`/public/img/categories${category.announcement}`" :alt="category.title" class="rounded-xl">
+        <div v-if="category.id <= 6">
+          <div class="absolute text-white font-bold left-3.5 bottom-2">{{category.title}}</div>
+          <img :src="`/public/img/categories${category.announcement}`" :alt="category.title" class="rounded-xl">
+        </div>
       </div>
     </section>
   </article>
